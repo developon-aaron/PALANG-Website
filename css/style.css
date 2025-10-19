@@ -290,11 +290,16 @@ section {
 
 @media (max-width: 768px) {
   .two-col {
-    grid-template-columns: 1fr; /* 1열로 변경 */
-    text-align: center; /* 텍스트도 가운데 정렬 */
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .two-col .col.left {
+    align-items: flex-start;
   }
 
   .two-col .col.right {
+    justify-content: center;
     margin-bottom: 20px;
   }
 
