@@ -114,8 +114,9 @@ section {
   min-height: 500px;
   height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column; /* 위에 텍스트, 아래 화살표 배치 */
   justify-content: center;
+  align-items: center;
   text-align: center;
 }
 .hero .wrap {
@@ -128,8 +129,10 @@ section {
 .scroll-down {
   position: absolute;
   bottom: 20%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0; /* ✅ */
+  right: 0; /* ✅ */
+  margin: 0 auto; /* ✅ 가운데 정렬 */
+  width: max-content; /* 내용만큼 너비 */
   color: #fff;
   cursor: pointer;
   animation: float 2s ease-in-out infinite;
@@ -147,13 +150,13 @@ section {
 
 @keyframes float {
   0% {
-    transform: translate(-50%, 0);
+    transform: translateY(0);
   }
   50% {
-    transform: translate(-50%, -15px);
+    transform: translateY(-15px);
   }
   100% {
-    transform: translate(-50%, 0);
+    transform: translateY(0);
   }
 }
 
