@@ -288,6 +288,21 @@ section {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
+@media (max-width: 768px) {
+  .two-col {
+    grid-template-columns: 1fr; /* 1열로 변경 */
+    text-align: center; /* 텍스트도 가운데 정렬 */
+  }
+
+  .two-col .col.right {
+    margin-bottom: 20px;
+  }
+
+  .sensor-img {
+    max-width: 90%;
+  }
+}
+
 /* STORY */
 /* 2열 레이아웃 기본 */
 #story .wrap.two-col {
