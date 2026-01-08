@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PALANG — Technology</title>
+    <link rel="stylesheet" href="css/technology.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,300..700,0..1,-50..200"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Minimal slider styling to fit your theme -->
+  </head>
+
+  <body>
+    <!-- NAV: copy your existing nav from index.html 그대로 -->
+    <div class="nav" id="top">
+      <div class="wrap">
+        <a href="./" class="brand">
+          <img src="./assets/logo.png" alt="PALANG logo" class="brand-logo" />
+        </a>
+
+        <button class="menu-btn" type="button" aria-label="Open menu">
+          Menu
+        </button>
+
+        <ul>
+          <li><a class="navigator" href="./index.html">Home</a></li>
+          <li><a class="navigator" href="./index.html#story">Our Story</a></li>
+          <li><a class="active" href="./technology.html">Technology</a></li>
+          <li><a class="navigator" href="./index.html#team">Team</a></li>
+          <li><a class="navigator" href="./index.html#video">Video</a></li>
+          <li><a class="navigator" href="./index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <header class="tech-hero">
+      <div class="wrap">
+        <div class="eyebrow">Technology</div>
+        <h1 class="h2" style="color: #fff; margin-top: 14px">
+          How PALANG Works
+        </h1>
+        <p class="lead" style="color: rgba(255, 255, 255, 0.92)">
+          A focused, slide-based walkthrough of deployment, detection,
+          communication, and forecasting—built on validated prototype results.
+        </p>
+      </div>
+    </header>
+
+    <!-- SLIDER -->
+    <section class="tech-slider-section">
+      <div class="wrap">
+        <div class="tech-stage">
+          <!-- Left / Right arrows are outside the box so the BOX stays same size -->
+          <button class="tech-arrow tech-prev" aria-label="Previous slide">
+            <span class="material-symbols-outlined">chevron_left</span>
+          </button>
+
+          <div class="swiper tech-swiper">
+            <div class="swiper-wrapper">
+              <!-- 1 -->
+              <div class="swiper-slide">
+                <div class="tech-slide-box">
+                  <div class="tech-slide-top">
+                    <div class="tech-badge">
+                      <span class="material-symbols-outlined">schema</span>
+                    </div>
+                    <div class="tech-title">
+                      <h3>End-to-End System</h3>
+                      <div class="tech-count">
+                        <span class="now">1</span><span class="slash">/</span
+                        ><span class="total">7</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tech-content">
+                    <p>
+                      PALANG is an end-to-end wildfire ignition intelligence
+                      system: drone-deployed sensor nodes detect ignition at
+                      ground level, transmit priority alerts via LoRaWAN to
+                      gateways, and deliver authenticated events to a cloud
+                      dashboard with live mapping and forecasting layers.
+                    </p>
+
+                    <div class="tech-sub">Key components</div>
+                    <ul>
+                      <li>
+                        <b>Sensor node:</b> IR/optical sensing + BME688
+                        (gas/VOC) + GPS + solar harvesting + supercapacitor +
+                        LoRaWAN
+                      </li>
+                      <li>
+                        <b>Gateway:</b> receives LoRa packets and relays to
+                        cloud
+                      </li>
+                      <li>
+                        <b>Cloud platform:</b> live map, node status, risk
+                        layers, ignition estimation & forecasting
+                      </li>
+                    </ul>
+                    <div class="tech-sub">System Demonstration</div>
+                    <div class="tech-media">
+                      <img src="assets/placement.png" alt="falling_speed" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2 -->
+              <div class="swiper-slide">
+                <div class="tech-slide-box">
+                  <div class="tech-slide-top">
+                    <div class="tech-badge">
+                      <span class="material-symbols-outlined">air</span>
+                    </div>
+                    <div class="tech-title">
+                      <h3>Deployment: Autorotation</h3>
+                      <div class="tech-count">
+                        <span class="now">2</span><span class="slash">/</span
+                        ><span class="total">7</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tech-content">
+                    <p>
+                      PALANG uses a maple-seed-inspired autorotational enclosure
+                      for aerial deployment. Autorotation reduces descent speed
+                      (≈60% vs. non-rotating control), improves landing
+                      stability, and protects electronics—enabling rapid
+                      deployment in remote or hazardous terrain without manual
+                      installation.
+                    </p>
+
+                    <div class="tech-sub">Measured</div>
+                    <ul>
+                      <li>Terminal velocity reduction: ~60%</li>
+                      <li>
+                        Landing drift (30 drops): median 0.28 m, max 0.47 m
+                      </li>
+                    </ul>
+                    <div class="tech-sub">Visualized Results</div>
+                    <div class="tech-media">
+                      <img src="assets/falling_speed.png" alt="falling_speed" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3 -->
+              <div class="swiper-slide">
+                <div class="tech-slide-box">
+                  <div class="tech-slide-top">
+                    <div class="tech-badge">
+                      <span class="material-symbols-outlined">sensors</span>
+                    </div>
+                    <div class="tech-title">
+                      <h3>Dual-Path Ignition Detection</h3>
+                      <div class="tech-count">
+                        <span class="now">3</span><span class="slash">/</span
+                        ><span class="total">7</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tech-content">
+                    <p>
+                      Ignition is not one event. PALANG treats ignition as two
+                      physical regimes—flaming and smoldering—and uses a
+                      dual-path architecture to detect each regime with the
+                      right physics.
+                    </p>
+
+                    <div class="tech-sub">Flaming (IR flicker)</div>
+                    <p class="tech-tight">
+                      Turbulent flames produce optical oscillations concentrated
+                      in the 8–30 Hz band. PALANG samples optical signals at 1
+                      kHz, applies an 8–30 Hz band-pass, and uses spectral
+                      persistence logic to trigger an event only when flicker
+                      energy persists.
+                    </p>
+
+                    <div class="tech-grid">
+                      <div class="tech-chip">
+                        <span class="material-symbols-outlined"
+                          >straighten</span
+                        >
+                        0.05 m² @ 10 m
+                      </div>
+                      <div class="tech-chip">
+                        <span class="material-symbols-outlined">timer</span> 0.9
+                        s median
+                      </div>
+                      <div class="tech-chip">
+                        <span class="material-symbols-outlined">verified</span>
+                        98% / 50 trials
+                      </div>
+                      <div class="tech-chip">
+                        <span class="material-symbols-outlined">wb_sunny</span>
+                        300–10,000+ lux
+                      </div>
+                    </div>
+                    <div class="tech-sub">Visualized Results</div>
+                    <div class="tech-media">
+                      <img src="assets/Flaming_DT.png" alt="flaming" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4 -->
+              <div class="swiper-slide">
+                <div class="tech-slide-box">
+                  <div class="tech-slide-top">
+                    <div class="tech-badge">
+                      <span class="material-symbols-outlined">blur_on</span>
+                    </div>
+                    <div class="tech-title">
+                      <h3>Smoldering Detection</h3>
+                      <div class="tech-count">
+                        <span class="now">4</span><span class="slash">/</span
+                        ><span class="total">7</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tech-content">
+                    <p>
+                      Smoldering has weak flicker. Instead, smoke scattering
+                      causes gradual optical intensity shifts. PALANG detects
+                      sustained slopes (low-pass + temporal slope logic) and
+                      cross-validates with correlated VOC/gas signals from
+                      BME688 to suppress false triggers from ambient lighting or
+                      weather drift.
+                    </p>
+
+                    <div class="tech-sub">Measured</div>
+                    <div class="tech-grid">
+                      <div class="tech-chip">
+                        <span class="material-symbols-outlined">timer</span> 24
+                        s @ 10 m
+                      </div>
+                      <div class="tech-chip">
+                        <span class="material-symbols-outlined">verified</span>
+                        96% / 50 trials
+                      </div>
+                      <div class="tech-chip">
+                        <span class="material-symbols-outlined">science</span>
+                        BME688 VOC/gas confirm
+                      </div>
+                      <div class="tech-chip">
+                        <span class="material-symbols-outlined">shield</span>
+                        suppresses non-combustion shifts
+                      </div>
+                    </div>
+                    <div class="tech-sub">Visualized Results</div>
+                    <div class="tech-media">
+                      <img src="assets/Smoldering_DT.png" alt="smoldering" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 5 -->
+              <div class="swiper-slide">
+                <div class="tech-slide-box">
+                  <div class="tech-slide-top">
+                    <div class="tech-badge">
+                      <span class="material-symbols-outlined">hub</span>
+                    </div>
+                    <div class="tech-title">
+                      <h3>Communication Pipeline</h3>
+                      <div class="tech-count">
+                        <span class="now">5</span><span class="slash">/</span
+                        ><span class="total">7</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tech-content">
+                    <p>
+                      Nodes transmit event packets through LoRaWAN to gateways,
+                      which forward alerts to the cloud. The cloud dashboard
+                      visualizes sensor status, locations, and risk layers
+                      end-to-end.
+                    </p>
+
+                    <div class="tech-sub">Measured</div>
+                    <div class="tech-grid">
+                      <div class="tech-chip">
+                        <span class="material-symbols-outlined">expand</span>
+                        500 m LOS
+                      </div>
+                      <div class="tech-chip">
+                        <span class="material-symbols-outlined"
+                          >mark_email_read</span
+                        >
+                        100% delivery
+                      </div>
+                      <div class="tech-chip">
+                        <span class="material-symbols-outlined">bolt</span> 6.8
+                        s alert-to-map
+                      </div>
+                    </div>
+                    <div class="tech-sub">Visualized Results</div>
+                    <div class="tech-media">
+                      <img src="assets/End to End.png" alt="end-to-end" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 6 -->
+              <div class="swiper-slide">
+                <div class="tech-slide-box">
+                  <div class="tech-slide-top">
+                    <div class="tech-badge">
+                      <span class="material-symbols-outlined">solar_power</span>
+                    </div>
+                    <div class="tech-title">
+                      <h3>Power Autonomy</h3>
+                      <div class="tech-count">
+                        <span class="now">6</span><span class="slash">/</span
+                        ><span class="total">7</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tech-content">
+                    <p>
+                      PALANG is designed for unattended, long-term field
+                      operation. Under the deployed duty cycle, the node stays
+                      in deep sleep at 0.11 mW, wakes for scheduled telemetry,
+                      and immediately wakes for ignition events. Solar
+                      harvesting with supercapacitor storage enables continuous
+                      operation without battery replacement.
+                    </p>
+
+                    <div class="tech-sub">Measured</div>
+                    <div class="tech-grid">
+                      <div class="tech-chip">
+                        <span class="material-symbols-outlined">bedtime</span>
+                        0.11 mW sleep
+                      </div>
+                      <div class="tech-chip">
+                        <span class="material-symbols-outlined">flash_on</span>
+                        16.6 mW burst
+                      </div>
+                      <div class="tech-chip">
+                        <span class="material-symbols-outlined"
+                          >battery_saver</span
+                        >
+                        battery-free operation
+                      </div>
+                    </div>
+                    <div class="tech-sub">Visualized Results</div>
+                    <div class="tech-media">
+                      <img
+                        src="assets/power_consumption.png"
+                        alt="falling_speed"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 7 -->
+              <div class="swiper-slide">
+                <div class="tech-slide-box">
+                  <div class="tech-slide-top">
+                    <div class="tech-badge">
+                      <span class="material-symbols-outlined">verified</span>
+                    </div>
+                    <div class="tech-title">
+                      <h3>Validation Summary</h3>
+                      <div class="tech-count">
+                        <span class="now">7</span><span class="slash">/</span
+                        ><span class="total">7</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tech-content">
+                    <ul>
+                      <li>
+                        Flaming: 0.9 s median, 98% success (50 trials), 0.05 m²
+                        at 10 m
+                      </li>
+                      <li>
+                        Smoldering: 24 s median, 96% success (50 trials),
+                        optical + VOC/gas confirmation
+                      </li>
+                      <li>
+                        False alarms: 1.46% over 8 hours daytime monitoring
+                      </li>
+                      <li>
+                        Comms: 100% packet delivery at 500 m LOS, 6.8 s
+                        alert-to-map latency
+                      </li>
+                      <li>
+                        Power: 0.11 mW sleep, solar-powered continuous operation
+                      </li>
+                      <li>
+                        Deployability: ~60% slower descent, stable landing drift
+                      </li>
+                    </ul>
+
+                    <div class="tech-note">
+                      Next: multi-sensor outdoor pilots to quantify performance
+                      under wind, rain, and complex terrain.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="tech-arrow tech-next" aria-label="Next slide">
+            <span class="material-symbols-outlined">chevron_right</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="gallery section alt" id="gallery">
+      <div class="wrap">
+        <div class="kicker">
+          <span class="eyebrow">Gallery</span>
+        </div>
+        <h2 class="h2">Hardware & Field Photos</h2>
+        <p class="lead">
+Click on each photo to view it larger
+       </p>
+
+        <div class="gallery-grid">
+          <!-- 1 -->
+          <figure class="gallery-card">
+            <div class="gallery-media">
+              <img
+                src="./assets/gateway.jpg"
+                alt="LoRaWAN Gateway"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="gallery-caption">LoRaWAN Gateway</figcaption>
+          </figure>
+
+          <!-- 2 -->
+          <figure class="gallery-card">
+            <div class="gallery-media">
+              <img
+                src="./assets/enclosure.jpg"
+                alt="Sensor node enclosure"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="gallery-caption">
+              Sensor Node (Enclosure)
+            </figcaption>
+          </figure>
+
+          <!-- 3 -->
+          <figure class="gallery-card">
+            <div class="gallery-media">
+              <img
+                src="./assets/gateway-pcb.jpg"
+                alt="PCB close-up"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="gallery-caption">
+              Electronics / PCB (Gateway)
+            </figcaption>
+          </figure>
+
+          <!-- 4 -->
+          <figure class="gallery-card">
+            <div class="gallery-media">
+              <img
+                src="./assets/sensor-pcb.jpg"
+                alt="Deployment drop test"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="gallery-caption">
+              Electronics / PCB (Sensor Node)
+            </figcaption>
+          </figure>
+
+          <!-- 5 -->
+          <figure class="gallery-card">
+            <div class="gallery-media">
+              <img
+                src="./assets/field_placement.jpg"
+                alt="Field placement"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="gallery-caption">Field Placement</figcaption>
+          </figure>
+
+           <figure class="gallery-card">
+            <div class="gallery-media">
+              <img
+                src="./assets/Detected.png"
+                alt="Detected"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="gallery-caption">Flaming Detection <figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <div class="gallery-media">
+              <img
+                src="./assets/Prediction Model.png"
+                alt="Detected"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="gallery-caption">Prediction Model <figcaption>
+          </figure>
+
+           <figure class="gallery-card">
+            <div class="gallery-media">
+              <img
+                src="./assets/Environment data.png"
+                alt="Detected"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="gallery-caption">Environment Data<figcaption>
+          </figure>
+           
+
+           <figure class="gallery-card">
+            <div class="gallery-media">
+              <img
+                src="./assets/Map UI.png"
+                alt="Detected"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="gallery-caption">Map UI<figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        © <span id="y"></span> 2026 PALANG • Wildfire Detection in Seconds
+      </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top" type="button">
+      <span class="material-symbols-outlined">arrow_upward</span>
+    </button>
+<div class="image-modal" id="imageModal">
+  <img id="modalImage" src="" alt="Expanded image" />
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      // Mobile menu (same behavior as index)
+      (function () {
+        const nav = document.querySelector(".nav");
+        const btn = document.querySelector(".menu-btn");
+        if (btn && nav)
+          btn.addEventListener("click", () => nav.classList.toggle("open"));
+      })();
+
+      // Back to top
+      (function () {
+        const btn = document.querySelector(".back-to-top");
+        if (!btn) return;
+        function onScroll() {
+          const show = window.scrollY > 600;
+          btn.style.opacity = show ? "1" : "0";
+          btn.style.pointerEvents = show ? "auto" : "none";
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+        btn.addEventListener("click", () =>
+          window.scrollTo({ top: 0, behavior: "smooth" })
+        );
+      })();
+
+      // Swiper
+      new Swiper(".tech-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        speed: 450,
+        navigation: {
+          nextEl: ".tech-next",
+          prevEl: ".tech-prev",
+        },
+        keyboard: { enabled: true },
+      });
+
+
+        const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+
+  document.querySelectorAll(".gallery-media img").forEach(img => {
+    img.addEventListener("click", () => {
+      modalImg.src = img.src;
+      modal.classList.add("active");
+    });
+  });
+
+  modal.addEventListener("click", () => {
+    modal.classList.remove("active");
+  });
+    </script>
+  </body>
+</html>

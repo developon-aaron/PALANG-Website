@@ -1,0 +1,396 @@
+.tech-hero {
+  position: relative;
+  padding: 110px 0 100px;
+  background: url("../assets/bg.3.jpg") center center / cover no-repeat;
+}
+
+.tech-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.tech-hero .wrap {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.tech-hero .eyebrow {
+  opacity: 0.9;
+}
+.tech-hero .lead {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tech-slider-section {
+  padding: 40px 0 0 0;
+}
+.tech-swiper {
+  margin-top: 26px;
+}
+
+/* ===== Technology Slider (Band + Fixed Height, match main theme) ===== */
+
+/* stage keeps arrows outside the fixed box */
+.tech-stage {
+  width: 100%;
+  max-width: none;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* swiper full width */
+.tech-swiper {
+  width: 100%;
+  margin-top: 26px;
+}
+
+/* ONE band box (fixed height, full width) */
+.tech-slide-box {
+  width: 100%;
+  height: auto; /* ✅ fixed height */
+  border-radius: 0;
+
+  background: var(--bg); /* ✅ match page background */
+
+  box-shadow: none;
+
+  color: var(--text);
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* inner content max width + page padding */
+.tech-slide-box > * {
+  max-width: var(--maxw);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* top header row with icon + title + count */
+.tech-slide-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  margin-bottom: 16px;
+}
+
+/* icon badge: matches your icon-box vibe */
+.tech-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: var(--brand);
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.tech-badge .material-symbols-outlined {
+  font-size: 28px;
+  color: #fff;
+}
+
+.tech-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+.tech-title h3 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 26px;
+  letter-spacing: -0.2px;
+  color: #111;
+}
+
+.tech-count {
+  font-size: 13px;
+  color: var(--muted);
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(70, 145, 101, 0.08); /* brand tint */
+}
+
+/* fixed height -> content scrolls inside */
+.tech-content {
+  flex: 1;
+  overflow: auto;
+  padding-right: 8px;
+}
+
+.tech-content::-webkit-scrollbar {
+  width: 8px;
+}
+.tech-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 999px;
+}
+.tech-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tech-content p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.tech-sub {
+  margin: 16px 0 10px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.tech-content ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.tech-content li {
+  margin: 9px 0;
+}
+
+/* chip grid for measured stats */
+.tech-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tech-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+
+  background: #fff; /* card tone */
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  color: var(--muted);
+  font-size: 14px;
+}
+.tech-chip .material-symbols-outlined {
+  font-size: 18px;
+  color: var(--brand);
+}
+
+.tech-note {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+
+  background: #fff; /* ✅ if you want note also match card tone */
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  color: var(--muted);
+}
+
+/* external arrows (your custom arrows) */
+.tech-arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow);
+
+  color: #111;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.tech-arrow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1);
+}
+.tech-arrow .material-symbols-outlined {
+  font-size: 26px;
+}
+
+/* If you use Swiper default navigation buttons instead of .tech-arrow,
+   uncomment below and ensure HTML has .swiper-button-prev/.swiper-button-next
+
+.tech-swiper .swiper-button-prev,
+.tech-swiper .swiper-button-next{
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.95);
+  border: 1px solid rgba(0,0,0,0.12);
+  box-shadow: var(--shadow);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.tech-swiper .swiper-button-prev::after,
+.tech-swiper .swiper-button-next::after{
+  font-size: 18px;
+  color: #111;
+}
+.tech-swiper .swiper-button-prev{ left: 14px; }
+.tech-swiper .swiper-button-next{ right: 14px; }
+*/
+
+@media (max-width: 720px) {
+  .tech-slide-box {
+    height: 560px; /* ✅ fixed height on mobile too */
+    padding: 34px 0; /* band padding */
+  }
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Gallery Section (5-grid optimized) ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 32px;
+}
+
+/* 카드 */
+.gallery-card {
+  margin: 0;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* 이미지 */
+.gallery-media {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #f1f1f1;
+  overflow: hidden;
+}
+
+.gallery-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.22s ease;
+}
+
+.gallery-card:hover .gallery-media img {
+  transform: scale(1.05);
+}
+
+/* 캡션 */
+.gallery-caption {
+  padding: 12px 14px 14px;
+  font-weight: 700;
+  color: #111;
+  font-size: 14px;
+}
+
+/* tablet: 2 columns */
+@media (max-width: 1000px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* mobile: 1 column */
+@media (max-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.ai-note {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+.tech-media {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.tech-media img {
+  width: 70%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+.tech-content {
+  padding-bottom: 24px;
+}
+
+/* ===== Image Modal ===== */
+.image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 9999;
+}
+
+.image-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.image-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  animation: zoomIn 0.25s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
